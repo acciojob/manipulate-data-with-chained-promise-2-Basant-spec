@@ -1,4 +1,3 @@
-//your JS code here. If required.
 // Input array
 const inputArray = [1, 2, 3, 4];
 
@@ -15,13 +14,13 @@ function processArray(arr) {
   return delay(1000) // Wait 1 second
     .then(() => {
       const evenNumbers = arr.filter(num => num % 2 === 0);
-      outputDiv.innerHTML = evenNumbers.join(", "); // Display filtered numbers
+      outputDiv.innerHTML = evenNumbers.join(","); // Ensure no extra spaces
       return evenNumbers; // Pass the filtered array to the next step
     })
     // Step 2: Multiply even numbers by 2 and display
     .then(evenNumbers => delay(2000).then(() => {
       const multipliedNumbers = evenNumbers.map(num => num * 2);
-      outputDiv.innerHTML = multipliedNumbers.join(", "); // Display multiplied numbers
+      outputDiv.innerHTML = multipliedNumbers.join(","); // Ensure no extra spaces
       return multipliedNumbers; // Resolve with final array
     }));
 }
